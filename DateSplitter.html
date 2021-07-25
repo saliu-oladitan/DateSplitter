@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    
+<marquee>SALIU'S DATE SPLITTER</marquee>
+<br><br><br><br>
+Pick Date <input type = "month" name = "MonthYear" id = "MonthYear" value = "" onchange="SplitMonthYear()"/> <br><br><br>
+<br><br>
+
+Month: <textarea rows="2" cols="40" id="Month" readonly></textarea><br>
+<br><br>
+Year: <textarea rows="2" cols="40" id="Year" readonly></textarea><br>
+
+
+<script>
+  function SplitMonthYear() {
+    
+      var MonthYear = document.getElementById("MonthYear").value;
+      var month = MonthYear.split("-")[1];
+      var Year = MonthYear.split("-")[0];
+      if (month ==01){
+        month="JANUARY"
+      }
+      else if (month ==02){
+        month="FEBRUARY"
+      }
+      else if (month ==03){
+        month="MARCH"
+      }      else if (month ==04){
+        month="APRIL"
+      }      else if (month ==05){
+        month="MAY"
+      }      else if (month ==06){
+        month="JUNE"
+      }      else if (month ==07){
+        month="JULY"
+      }      else if (month ==08){
+        month="AUGUST"
+      }      else if (month ==09){
+        month="SEPTEMBER"
+      }      else if (month ==10){
+        month="OCTOBER"
+      }      else if (month ==11){
+        month="NOVEMBER"
+      }      else if (month ==12){
+        month="DECEMBER"
+      }    
+      else{
+        month=""
+      }
+
+document.getElementById("Month").innerHTML=month;
+document.getElementById("Year").innerHTML=Year;
+     // alert("The month is " + month +" and the year is "+ Year);
+
+  }
+</script>
+</body>
+</html>
